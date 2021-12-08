@@ -1,3 +1,4 @@
 Super casual toy balls and buttons. Implemented with Canvas and SurfaсeView. The mechanics of inertial movement and objects collision have been worked out
-![ball_game_screenshots](https://user-images.githubusercontent.com/83759412/145262221-1e2e60d1-51a4-4bc1-adb9-de86656e2c0e.png)
+![ball_game_screenshots](https://user-images.githubusercontent.com/83759412/145262483-15f3c1e3-f5e9-4b5c-aadb-d8261d3fa6f3.png)
+
 
