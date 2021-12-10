@@ -7,6 +7,8 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.View
+import android.view.ViewPropertyAnimator
+import android.view.animation.DecelerateInterpolator
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -89,18 +91,28 @@ class MainActivity : AppCompatActivity() {
                 .toFloat()
             angleChange[index] = fraction
         }
-        hammer.run {
-            translationX = -angleChange[2] * maxRotate
-            translationY = angleChange[1] * maxRotate
+        hammer.animate {
+            translationX( -angleChange[2] * maxRotate)
+            translationY(angleChange[1] * maxRotate)
         }
-        yellowBall.run {
-            translationX = angleChange[2] * maxRotate
-            translationY = -angleChange[1] * maxRotate
+        yellowBall.animate {
+            translationX(angleChange[2] * maxRotate)
+            translationY(-angleChange[1] * maxRotate)
         }
-        textRotate.run {
-            translationX = angleChange[0] * maxRotate / 2
-            translationY = -angleChange[1] * maxRotate / 2
+        textRotate.animate {
+            translationX(angleChange[0] * maxRotate / 2)
+            translationY(-angleChange[1] * maxRotate / 2)
         }
+    }
+
+    private fun View.animate(builder: ViewPropertyAnimator.() -> Unit) {
+        animate()
+            .apply {
+                duration = 300
+                interpolator = DecelerateInterpolator()
+                builder()
+            }
+            .start()
     }
 }
 
