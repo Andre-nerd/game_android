@@ -10,10 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.parallax_views.data.SensorData
 import com.example.parallax_views.data.SourceSensorsData
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
+
 
 
 /** Этот код написан на основании статьи https://habr.com/ru/company/dododev/blog/584498/
