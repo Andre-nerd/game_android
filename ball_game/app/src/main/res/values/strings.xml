@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Ball_game</string>
-    <string name="score">Score</string>
-    <string name="record">Record</string>
+    <string name="app_name">bombigo_game</string>
+    <string name="play">Start the game</string>
+    <string name="warning">Warning!</string>
+    <string name="energy">Energy</string>
+    <string name="reset_scores_and_level">Reset all</string>
+    <string name="level">Your level: </string>
+    <string name="score">Score: </string>
+    <string name="game_over">game over</string>
+    <string name="you_win">:)you win</string>
 </resources>
